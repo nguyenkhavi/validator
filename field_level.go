@@ -70,6 +70,10 @@ func (v *validate) Field() reflect.Value {
 	return v.flField
 }
 
+func (v *validate) SetFieldValue(value reflect.Value) {
+	v.flField = value
+}
+
 // FieldName returns the field's name with the tag
 // name taking precedence over the fields actual name.
 func (v *validate) FieldName() string {
